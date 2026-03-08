@@ -11,32 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        dark: '#0a0a0a',
-                        darker: '#000000',
-                    },
-                    keyframes: {
-                        'fade-in-up': {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    },
-                    animation: {
-                        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
 <body class="bg-darker text-white font-sans antialiased selection:bg-white selection:text-black">
@@ -85,7 +59,7 @@
 
     <header id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden bg-darker">
         <!-- TODO: Insert your own video inside /assets/video/hero.webm -->
-        <video autoplay loop muted playsinline
+        <video preload="auto" autoplay loop muted playsinline
             class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover opacity-60">
             <source
                 src="https://assets.mixkit.co/videos/preview/mixkit-young-woman-with-a-camera-taking-pictures-34407-large.mp4"
@@ -144,7 +118,7 @@
                 <!-- Tarjeta Comida -->
                 <a href="comida.html"
                     class="group relative rounded-3xl overflow-hidden aspect-[4/5] md:aspect-square bg-black border border-white/5 block">
-                    <img src="assets/img/Comida.webp"
+                    <img decoding="async" loading="lazy" src="assets/img/Comida.webp"
                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none">
@@ -162,7 +136,8 @@
                 <!-- Tarjeta Deporte -->
                 <a href="deporte.html"
                     class="group relative rounded-3xl overflow-hidden aspect-[4/5] md:aspect-square bg-black border border-white/5 block">
-                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80&w=800"
+                    <img decoding="async" loading="lazy"
+                        src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80&w=800"
                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none">
@@ -180,7 +155,7 @@
                 <!-- Tarjeta Música -->
                 <a href="musica.html"
                     class="group relative rounded-3xl overflow-hidden aspect-[4/5] md:aspect-square bg-black border border-white/5 block">
-                    <img src="assets/img/Musica1.webp"
+                    <img decoding="async" loading="lazy" src="assets/img/Musica1.webp"
                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none">
@@ -198,7 +173,7 @@
                 <!-- Tarjeta Eventos -->
                 <a href="eventos.html"
                     class="group relative rounded-3xl overflow-hidden aspect-[4/5] md:aspect-square bg-black border border-white/5 block">
-                    <img src="assets/img/Evento.webp"
+                    <img decoding="async" loading="lazy" src="assets/img/Evento.webp"
                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none">
@@ -216,7 +191,7 @@
                 <!-- Tarjeta Retratos -->
                 <a href="retratos.html"
                     class="group relative rounded-3xl overflow-hidden aspect-[4/5] md:aspect-square bg-black border border-white/5 block">
-                    <img src="assets/img/Personas.webp"
+                    <img decoding="async" loading="lazy" src="assets/img/Personas.webp"
                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none">
@@ -234,7 +209,7 @@
                 <!-- Tarjeta Otros -->
                 <a href="otros.html"
                     class="group relative rounded-3xl overflow-hidden aspect-[4/5] md:aspect-square bg-black border border-white/5 block">
-                    <img src="assets/img/Otros1.webp"
+                    <img decoding="async" loading="lazy" src="assets/img/Otros1.webp"
                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none">
@@ -263,7 +238,7 @@
                 <div class="order-2 lg:order-1 flex justify-center lg:justify-end">
                     <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden group">
                         <!-- Foto Real (Profile.png) -->
-                        <img src="assets/img/Profile.png" alt="Lautaro"
+                        <img decoding="async" loading="lazy" src="assets/img/Profile.png" alt="Lautaro"
                             class="object-cover w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-105 transform">
                         <div
                             class="absolute inset-0 border border-white/10 rounded-3xl pointer-events-none z-10 transition-colors group-hover:border-white/30 duration-500">
@@ -353,14 +328,16 @@
             <p class="text-gray-500 text-sm font-light mb-6 md:mb-0">© 2026 Lautaro. Todos los derechos reservados.</p>
 
             <div class="flex space-x-8">
-                <a href="https://www.instagram.com/dreamin.raw/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors">
+                <a href="https://www.instagram.com/dreamin.raw/" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-500 hover:text-white transition-colors">
                     <span class="sr-only">Instagram</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                     </svg>
                 </a>
-                <a href="https://www.instagram.com/dreamin.raw/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors">
+                <a href="https://www.instagram.com/dreamin.raw/" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-500 hover:text-white transition-colors">
                     <span class="sr-only">Vimeo</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                         <path
