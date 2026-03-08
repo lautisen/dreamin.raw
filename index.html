@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lautaro | Dreamin.Raw - Portafolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#000000',
+                    },
+                    keyframes: {
+                        'fade-in-up': {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-darker text-white font-sans antialiased selection:bg-white selection:text-black">
+
+    <nav id="navbar"
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-6 text-white border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-12">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#inicio"
+                        class="text-2xl font-bold tracking-widest uppercase hover:opacity-80 transition-opacity">Dreamin.Raw</a>
+                </div>
+                <div
+                    class="hidden md:flex md:space-x-8 items-center bg-black/20 px-8 py-3 rounded-full backdrop-blur-sm border border-white/5">
+                    <a href="#inicio" class="text-sm font-medium hover:text-gray-300 transition-colors">Inicio</a>
+                    <a href="#comida" class="text-sm font-medium hover:text-gray-300 transition-colors">Portafolio</a>
+                    <a href="#sobre-mi" class="text-sm font-medium hover:text-gray-300 transition-colors">Sobre mí</a>
+                    <a href="#contacto" class="text-sm font-medium hover:text-gray-300 transition-colors">Contacto</a>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <a href="#contacto"
+                        class="text-sm font-medium border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors duration-300">Contratar</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-btn"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú</span>
+                        <svg class="block h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-darker/95 backdrop-blur-xl absolute w-full h-screen top-0 left-0 flex flex-col items-center justify-center space-y-8"
+            id="mobile-menu">
+            <a href="#inicio" class="text-2xl font-medium text-white hover:text-gray-300 tracking-wide">Inicio</a>
+            <a href="#comida" class="text-2xl font-medium text-white hover:text-gray-300 tracking-wide">Portafolio</a>
+            <a href="#sobre-mi" class="text-2xl font-medium text-white hover:text-gray-300 tracking-wide">Sobre mí</a>
+            <a href="#contacto" class="text-2xl font-medium text-white hover:text-gray-300 tracking-wide">Contacto</a>
+        </div>
+    </nav>
+
+    <header id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden bg-darker">
+        <!-- TODO: Insert your own video inside /assets/video/hero.webm -->
+        <video autoplay loop muted playsinline
+            class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover opacity-60">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-young-woman-with-a-camera-taking-pictures-34407-large.mp4"
+                type="video/mp4">
+        </video>
+
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-dark z-10"></div>
+
+        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center">
+            <p class="text-xs md:text-sm font-semibold text-gray-400 tracking-[0.3em] uppercase mb-6 opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.2s;">Realizador Audiovisual</p>
+
+            <h1 class="text-5xl md:text-7xl lg:text-9xl font-bold text-white mb-4 tracking-tighter opacity-0 animate-fade-in-up leading-none"
+                style="animation-delay: 0.4s;">
+                Lautaro.
+            </h1>
+
+            <p class="text-xl md:text-3xl font-medium text-white/80 mb-6 opacity-0 animate-fade-in-up tracking-wider"
+                style="animation-delay: 0.5s;">
+                Dreamin.Raw
+            </p>
+
+            <p class="text-lg md:text-xl text-gray-400 mb-12 font-light opacity-0 animate-fade-in-up max-w-2xl leading-relaxed"
+                style="animation-delay: 0.6s;">
+                Capturando la esencia visual del deporte, gastronomía, música y la vida real.
+            </p>
+
+            <a href="#comida"
+                class="opacity-0 animate-fade-in-up inline-flex items-center justify-center bg-white text-black font-semibold px-10 py-4 rounded-full hover:bg-gray-200 transition-all transform hover:scale-105 duration-300"
+                style="animation-delay: 0.8s;">
+                Explorar Galerías
+            </a>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 opacity-50 animate-bounce">
+            <a href="#comida" class="text-white hover:text-gray-300 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <div class="bg-dark pt-32 pb-10 text-center px-4">
+        <h2 class="text-4xl md:text-6xl font-bold text-white tracking-tight mb-4">Portafolio Premium</h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto font-light mb-16">Una selección de mis mejores obras divididas
+            en distintas ramas de la cinematografía y fotografía.</p>
+    </div>
+
+    <!-- ======================= -->
+    <!-- SECCIÓN COMIDA (Foodie) -->
+    <!-- ======================= -->
+    <section id="comida" class="py-16 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-10 border-l-4 border-white pl-4">Comida (Foodie)
+            </h3>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6">
+
+                <div
+                    class="break-inside-avoid mb-6 rounded-3xl overflow-hidden bg-black border border-white/5 relative group">
+                    <iframe src="https://www.instagram.com/p/DUJxeYPiCRd/embed" class="w-full h-[660px]" frameborder="0"
+                        <!-- Local Reels Fallback (Foodie) -->
+                        <div
+                            class="break-inside-avoid mb-6 rounded-3xl overflow-hidden bg-black border border-white/5 relative group cursor-pointer">
+                            <div
+                                class="h-[600px] flex flex-col items-center justify-center bg-gray-900/50 p-6 text-center">
+                                <svg class="w-12 h-12 text-gray-500 mb-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <p class="text-sm text-gray-400">Espacio para Video/Reel Gastronómico 1</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="break-inside-avoid mb-6 rounded-3xl overflow-hidden bg-black border border-white/5 relative group cursor-pointer">
+                            <div
+                                class="h-[600px] flex flex-col items-center justify-center bg-gray-900/50 p-6 text-center">
+                                <svg class="w-12 h-12 text-gray-500 mb-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <p class="text-sm text-gray-400">Espacio para Video/Reel Gastronómico 2</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="break-inside-avoid mb-6 rounded-3xl overflow-hidden bg-black border border-white/5 relative group cursor-pointer">
+                            <div
+                                class="h-[600px] flex flex-col items-center justify-center bg-gray-900/50 p-6 text-center">
+                                <svg class="w-12 h-12 text-gray-500 mb-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <p class="text-sm text-gray-400">Espacio para Video/Reel Gastronómico 3</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                            <img src="assets/img/Comida.webp" alt="Comida"
+                                class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform">
+                        </div>
+                        <div
+                            class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                            <img src="assets/img/Comida1.webp" alt="Restaurante 1"
+                                class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform">
+                        </div>
+                        <div
+                            class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                            <img src="assets/img/Comida3.webp" alt="Restaurante 3"
+                                class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform">
+                        </div>
+                        <div
+                            class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                            <img src="assets/img/Comida4.webp" alt="Restaurante 4"
+                                class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform">
+                        </div>
+                        <div
+                            class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                            <img src="assets/img/Comida5.webp" alt="Restaurante 5"
+                                class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 transform">
+                        </div>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- ======================= -->
+    <!-- SECCIÓN DEPORTE         -->
+    <!-- ======================= -->
+    <section id="deporte" class="py-16 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-10 border-l-4 border-gray-500 pl-4">Deporte</h3>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6">
+                <!-- Se dejó fotos de unsplash como placeholders a la espera de que subas fotos de deporte -->
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&q=80&w=800"
+                        alt="Deportes 1"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=800"
+                        alt="Deportes 2"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div
+                    class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black border border-white/10">
+                    <div class="relative w-full pb-[130%] md:pb-[150%]">
+                        <img src="https://images.unsplash.com/photo-1526566762798-8fac9c07aa7c?auto=format&fit=crop&q=80&w=800"
+                            class="absolute inset-0 w-full h-full object-cover opacity-60 align-middle">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30">
+                                <svg class="w-8 h-8 text-white ml-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= -->
+    <!-- SECCIÓN MÚSICA          -->
+    <!-- ======================= -->
+    <section id="musica" class="py-16 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-10 border-l-4 border-white pl-4">Música</h3>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6">
+                <!-- Local Reel Fallback (Música) -->
+                <div
+                    class="break-inside-avoid mb-6 rounded-3xl overflow-hidden bg-black border border-white/5 relative group cursor-pointer">
+                    <div class="h-[600px] flex flex-col items-center justify-center bg-gray-900/50 p-6 text-center">
+                        <svg class="w-12 h-12 text-gray-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <p class="text-sm text-gray-400">Espacio para Video/Reel Musical</p>
+                    </div>
+                </div>
+
+                <!-- Fotos locales de Música -->
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer">
+                    <img src="assets/img/Musica1.webp" alt="Musica Live 1"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer">
+                    <img src="assets/img/Musica2.webp" alt="Musica Live 2"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer">
+                    <img src="assets/img/Musica3.webp" alt="Musica Live 3"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer">
+                    <img src="assets/img/Musica4.webp" alt="Musica Live 4"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer">
+                    <img src="assets/img/Musica5.webp" alt="Musica Live 5"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= -->
+    <!-- EVENTOS & RETRATOS      -->
+    <!-- ======================= -->
+    <section id="eventos-retratos" class="py-16 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                <!-- Bloque Eventos -->
+                <div>
+                    <h3 class="text-3xl font-bold text-white mb-8 border-l-4 border-gray-400 pl-4">Eventos</h3>
+                    <div class="columns-1 sm:columns-2 gap-4">
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento1.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento2.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento3.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento4.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento5.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento6.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento2.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento3.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Evento4.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Boda.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Boda2.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/boda3.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/boda4.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque Retratos -->
+                <div>
+                    <h3 class="text-3xl font-bold text-white mb-8 border-l-4 border-white pl-4">Retratos (Gente)</h3>
+                    <div class="columns-1 sm:columns-2 gap-4">
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Personas.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Personas1.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Personas2.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Personas3.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Personas4.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Personas5.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Personas6.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/personas9.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                            <img src="assets/img/Personas10.webp"
+                                class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform
+                        duration-700">
+                    </div>
+                    <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                        <img src="assets/img/Personas1.webp"
+                            class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                        <img src="assets/img/Personas2.webp"
+                            class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                        <img src="assets/img/Personas3.webp"
+                            class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                        <img src="assets/img/Personas4.webp"
+                            class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                        <img src="assets/img/Personas5.webp"
+                            class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="break-inside-avoid mb-4 rounded-2xl overflow-hidden relative group">
+                        <img src="assets/img/Personas6.webp"
+                            class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- ======================= -->
+    <!-- OTROS                   -->
+    <!-- ======================= -->
+    <section id="otros" class="py-16 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-10 border-l-4 border-gray-600 pl-4">Otros Proyectos
+            </h3>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6">
+                <!-- Se añaden Otros1 y otros2, y un placeholder de relleno si es necesario -->
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer">
+                    <img src="assets/img/Otros1.webp"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                    <img src="assets/img/otros2.webp"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                    <img src="https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?auto=format&fit=crop&q=80&w=800"
+                        class="w-full h-auto object-cover opacity-40 group-hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="py-32 bg-darker relative">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden group">
+                        <!-- Utilizo una foto de personas como tu "Sobre mí" -->
+                        <img src="assets/img/Personas.webp" alt="Lautaro"
+                            class="object-cover w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-105 transform">
+                        <div
+                            class="absolute inset-0 border border-white/10 rounded-3xl pointer-events-none z-10 transition-colors group-hover:border-white/30 duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2 text-center lg:text-left">
+                    <p class="text-sm font-medium text-gray-500 tracking-widest uppercase mb-4">El Director</p>
+                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">Lautaro</h2>
+                    <h3 class="text-2xl font-light text-gray-400 mb-8 italic">Dreamin.Raw</h3>
+
+                    <div class="space-y-6 text-gray-400 text-lg font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        <p>
+                            Soy Lautaro, creador visual detrás de <strong>Dreamin.Raw</strong>. Mi pasión es capturar la
+                            esencia de los momentos, desde la crudeza y velocidad del deporte o un evento en vivo, hasta
+                            los detalles más exquisitos de la gastronomía y la música.
+                        </p>
+                        <p>
+                            Busco contar historias auténticas combinando una estética premium con una narrativa
+                            emocional en cada encuadre.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto (Footer) -->
+    <section id="contacto" class="py-32 bg-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Hablemos de tu idea</h2>
+                <p class="text-gray-400 text-lg font-light">Completa el formulario a continuación para discutir tu
+                    próximo proyecto juntos.</p>
+            </div>
+
+            <form class="space-y-6 p-8 md:p-12 bg-gray-900/50 rounded-3xl border border-white/5 backdrop-blur-sm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-400 mb-2">Nombre completo</label>
+                        <input type="text" id="nombre"
+                            class="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-white/50 focus:ring-1 focus:ring-white/50 transition-colors"
+                            placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                        <input type="email" id="email"
+                            class="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-white/50 focus:ring-1 focus:ring-white/50 transition-colors"
+                            placeholder="tu@email.com">
+                    </div>
+                </div>
+                <div>
+                    <label for="tipo" class="block text-sm font-medium text-gray-400 mb-2">Categoría de Proyecto</label>
+                    <select id="tipo"
+                        class="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white outline-none focus:border-white/50 focus:ring-1 focus:ring-white/50 transition-colors cursor-pointer">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="comida">Gastronomía / Foodie</option>
+                        <option value="musica">Música / Videoclips / Cobertura Live</option>
+                        <option value="deporte">Deportes</option>
+                        <option value="eventos">Eventos Corporativos / Sociales</option>
+                        <option value="retratos">Retratos y Moda</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium text-gray-400 mb-2">Detalles del
+                        Proyecto</label>
+                    <textarea id="mensaje" rows="5"
+                        class="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-white/50 focus:ring-1 focus:ring-white/50 transition-colors resize-none"
+                        placeholder="Cuéntame tu visión, fechas, locación..."></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-white text-black font-semibold py-4 rounded-xl hover:bg-gray-200 transition-all transform hover:scale-[1.02] duration-300">
+                    Enviar Solicitud
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <a href="#inicio"
+                class="text-xl font-bold tracking-widest uppercase text-white mb-6 md:mb-0">Dreamin.Raw</a>
+            <p class="text-gray-500 text-sm font-light mb-6 md:mb-0">© 2026 Lautaro. Todos los derechos reservados.</p>
+
+            <div class="flex space-x-8">
+                <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                    <span class="sr-only">Vimeo</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M22.396 7.164c-.093 2.026-1.507 4.799-4.244 8.32C15.32 19.16 12.93 21 11 21c-1.214 0-2.24-1.12-3.079-3.359L5.25 7.164C4.845 5.6 3.66 4.819 1.692 4.82v-1.63c3.08-1.536 5.584-1.396 7.512.42 1.928 1.815 2.14 4.6 2.14 6.4 0 1.2-.254 2.8-.76 4.8.846-1.5 1.549-3.418 2.112-5.753.563-2.336 1.408-3.504 2.535-3.504 1.691 0 2.651.866 2.768 2.598-1.353-.198-2.26.467-2.72 1.996 1.127 1.066 2.536 1.133 4.225.2z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
