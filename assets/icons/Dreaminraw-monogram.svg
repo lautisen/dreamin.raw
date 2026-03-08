@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter">
+  <!-- D shape: vertical line, top horizontal, right curve, bottom horizontal -->
+  <path d="M 50 40 L 110 40 A 60 60 0 0 1 110 160 L 50 160 Z" />
+  
+  <!-- R inner loop: top horizontal, right curve, bottom horizontal -->
+  <path d="M 50 75 L 90 75 A 25 25 0 0 1 90 125 L 50 125" />
+  
+  <!-- R leg: diagonal -->
+  <path d="M 80 125 L 125 185" />
+</svg>
