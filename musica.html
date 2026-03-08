@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música | Dreamin.Raw</title>
+    <link rel="icon" type="image/png" href="assets/icons/logo-white.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111111',
+                        darker: '#0a0a0a'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-darker text-white font-sans antialiased selection:bg-white selection:text-black">
+
+    <nav id="navbar"
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-black/90 backdrop-blur-md shadow-lg py-4 text-white border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-12">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="hover:opacity-80 transition-opacity flex items-center">
+                        <img src="assets/icons/logo-white.png" alt="Dreamin.Raw Logo" class="h-8 md:h-10 w-auto" />
+                    </a>
+                </div>
+                <div class="hidden md:flex md:space-x-8 items-center">
+                    <a href="index.html#inicio"
+                        class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Inicio</a>
+                    <a href="index.html#portafolio"
+                        class="text-sm font-medium text-white transition-colors">Portafolio</a>
+                    <a href="index.html#sobre-mi"
+                        class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Sobre mí</a>
+                    <a href="index.html#contacto"
+                        class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contacto</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2"
+                        aria-expanded="false">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10 absolute w-full top-full left-0">
+            <div class="px-2 pt-2 pb-6 space-y-2 sm:px-3 text-center">
+                <a href="index.html#inicio"
+                    class="block px-3 py-3 rounded-md text-base font-medium hover:bg-white/5 hover:text-white transition-colors">Inicio</a>
+                <a href="index.html#portafolio"
+                    class="block px-3 py-3 rounded-md text-base font-medium bg-white/5 text-white transition-colors">Portafolio</a>
+                <a href="index.html#sobre-mi"
+                    class="block px-3 py-3 rounded-md text-base font-medium hover:bg-white/5 hover:text-white transition-colors">Sobre
+                    mí</a>
+                <a href="index.html#contacto"
+                    class="block px-3 py-3 rounded-md text-base font-medium hover:bg-white/5 hover:text-white transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-16 bg-dark min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="index.html#portafolio"
+                class="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors group">
+                <svg class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Volver al Portafolio
+            </a>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-10 border-l-4 border-white pl-4">Música</h1>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6">
+                <!-- Videos (Instagram Reels) -->
+                <div
+                    class="break-inside-avoid mb-6 rounded-3xl overflow-hidden bg-white/5 border border-white/10 relative">
+                    <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/p/DVO2oR_Dpkb/" data-instgrm-version="14"
+                        style=" background:#FFF; border:0; margin: 1px; max-width:100%; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    </blockquote>
+                </div>
+
+                <!-- Photos -->
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                    <img src="assets/img/Musica1.webp" alt="Musica Live 1"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                    <img src="assets/img/Musica2.webp" alt="Musica Live 2"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                    <img src="assets/img/Musica3.webp" alt="Musica Live 3"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                    <img src="assets/img/Musica4.webp" alt="Musica Live 4"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="break-inside-avoid mb-6 rounded-3xl overflow-hidden relative group cursor-pointer bg-black">
+                    <img src="assets/img/Musica5.webp" alt="Musica Live 5"
+                        class="w-full h-auto object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <a href="index.html" class="hover:opacity-80 transition-opacity mb-6 md:mb-0">
+                <img src="assets/icons/logo-white.png" alt="Dreamin.Raw Logo" class="h-8 w-auto" />
+            </a>
+            <p class="text-gray-500 text-sm font-light mb-6 md:mb-0">© 2026 Lautaro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
